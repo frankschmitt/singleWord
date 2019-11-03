@@ -1,0 +1,13 @@
+= SYNOPSIS
+
+Word generator for "Just one" sessions, where
+- everyone except the player (the hint-givers) is shown the challenge word (which is randomly selected)
+- every hint-giver writes down a single word they associate with the challenge word
+- duplicate hints are removed
+- the player is shown the remaining hints, and they have one guess to determine the challenge word
+
+ 
+= RUNNING
+```
+./gradlew bootRun
+```
