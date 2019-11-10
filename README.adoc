@@ -1,6 +1,6 @@
 = SYNOPSIS
 
-Word generator for "Just one" sessions, where
+Word generator for a simple cooperative word guessing game, where
 - everyone except the player (the hint-givers) is shown the challenge word (which is randomly selected)
 - every hint-giver writes down a single word they associate with the challenge word
 - duplicate hints are removed
