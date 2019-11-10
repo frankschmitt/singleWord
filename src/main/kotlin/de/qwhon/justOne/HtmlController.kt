@@ -17,10 +17,16 @@ class HtmlController(private val repository: EntryRepository) {
     var logger = LoggerFactory.getLogger(HtmlController::class.java)
 
     @GetMapping("/")
+    fun home(model: Model): String {
+        model["title"] = "Home" // shorthand for model.addAttribute("title", "Blog")
+        return "home" // name of the template we want to use for rendering
+    }
+
+    @GetMapping("/allEntries")
     fun allEntries(model: Model): String {
-        model["title"] = "All entries" // shorthand for model.addAttribute("title", "Blog")
         val allEntries = repository.findAllByOrderByNameAsc()
         logger.info("found ${allEntries.count()} entries")
+        model["title"] = "All entries" // shorthand for model.addAttribute("title", "Blog")
         model["entries"] = allEntries.map { it.render() }
         return "allEntries" // name of the template we want to use for rendering
     }
@@ -38,7 +44,7 @@ class HtmlController(private val repository: EntryRepository) {
         return "justOne"
     }
 
-    @GetMapping("/randomEntry")
+    @GetMapping("/play")
     fun entry(model: Model): String {
         val allEntries = repository.findAllByOrderByNameAsc().shuffled()
         val entry = allEntries.firstOrNull()
@@ -46,10 +52,9 @@ class HtmlController(private val repository: EntryRepository) {
             null -> RenderedEntry(-1, "<n/a>", "n/a")
             else -> entry.render()
         }
-        model["title"] = "Random entry"
+        model["title"] = "Play"
         model["name"] = rendered.name
-        model["addedAt"] = rendered.addedAt
-        return "justOne"
+        return "play"
     }
 
  }
