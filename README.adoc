@@ -11,3 +11,7 @@ Word generator for a simple cooperative word guessing game, where
 ```
 ./gradlew bootRun
 ```
+
+
+= LICENSE
+Apache 2.0 (see LICENSE file)
