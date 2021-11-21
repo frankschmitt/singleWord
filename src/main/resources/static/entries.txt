@@ -18,7 +18,6 @@ Armstrong
 Asterix
 Australien
 Avatar
-Avicii
 Baby
 Bad
 Bahnhof
@@ -46,6 +45,7 @@ Blond
 Blume
 Blutwurst
 Bogen
+Bon
 Bonbon
 Bowling
 Boxen
@@ -80,6 +80,7 @@ Cocktail
 Computer
 Croissant
 Darwin
+Delphin
 Diamant
 Dinosaurier
 Disco
@@ -486,7 +487,6 @@ Teufel
 Theater
 Thunfisch
 Ticket
-Ticket
 Tiger
 Titanic
 Tokio
@@ -516,12 +516,14 @@ Vulkan
 Waage
 Wache
 Wahl
+Wal
 Walzer
 Weihnachten
 Wein
 Weizen
 Weiß
 Welle
+Weltwunder
 Werkzeug
 Western
 Wette
